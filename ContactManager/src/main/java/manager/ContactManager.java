@@ -36,4 +36,13 @@ public class ContactManager <T> {
     public ContactCategory getRelation() {
         return relation;
     }
+
+    //Custom toString() Implementation
+
+    @Override
+    public String toString() {
+        return "Contact Details: " + name + " " + surname + " " + phoneNumber + " " + relation;
+
+
+    }
 }
