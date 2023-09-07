@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class ContactManager {
 
-    //added Instance vars
+    /** Properties of Instance of ContactManager **/
     private final String name;
 
     private final String surname;
@@ -13,7 +13,7 @@ public class ContactManager {
 
     private final ContactCategory relation;
 
-    //added constructor
+   /** Class Constructor **/
     public ContactManager(String name, String surname, String phoneNumber, ContactCategory relation) {
         this.name = name;
         this.surname = surname;
@@ -22,6 +22,7 @@ public class ContactManager {
     }
 
 
+    /** 4 x get Methods to return values of Instance Properties **/
     public String getName() {
         return name;
     }
@@ -38,6 +39,8 @@ public class ContactManager {
         return relation;
     }
 
+    /** Customized equals() Implementation **/
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -45,12 +48,14 @@ public class ContactManager {
         return Objects.equals(getName(), that.getName()) && Objects.equals(getSurname(), that.getSurname()) && Objects.equals(getPhoneNumber(), that.getPhoneNumber()) && getRelation() == that.getRelation();
     }
 
+    /** Customized hashCode() Implementation **/
+
     @Override
     public int hashCode() {
         return Objects.hash(getName(), getSurname(), getPhoneNumber(), getRelation());
     }
 
-    //Customized toString() Implementation
+    /** Customized toString() Implementation **/
 
     @Override
     public String toString() {

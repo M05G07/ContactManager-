@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ContactRunnerTest {
 
-    //Creation of ArrayList for Testing
+    /** Creation of ArrayList for Testing **/
     List<ContactManager> contactBook  = new ArrayList<>();
 
 
@@ -23,7 +23,7 @@ class ContactRunnerTest {
     }
 
 
-
+   
     @DisplayName("Creation of Instance")
     @EnabledOnOs(value = OS.WINDOWS)
     @Test
