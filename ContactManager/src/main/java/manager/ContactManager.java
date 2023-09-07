@@ -1,40 +1,53 @@
 package manager;
 
-import manager.ContactCategory;
+import java.util.Objects;
 
-public class ContactManager <T> {
+public class ContactManager {
 
     //added Instance vars
-    private final T name;
+    private final String name;
 
-    private final T surname;
+    private final String surname;
 
-    private final T phoneNumber;
+    private final String phoneNumber;
 
     private final ContactCategory relation;
 
     //added constructor
-    public ContactManager(T name, T surname, T phoneNumber, ContactCategory relation) {
+    public ContactManager(String name, String surname, String phoneNumber, ContactCategory relation) {
         this.name = name;
         this.surname = surname;
         this.phoneNumber = phoneNumber;
         this.relation = relation;
     }
 
-    public T getName() {
+
+    public String getName() {
         return name;
     }
 
-    public T getSurname() {
+    public String getSurname() {
         return surname;
     }
 
-    public T getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
     public ContactCategory getRelation() {
         return relation;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ContactManager that)) return false;
+        return Objects.equals(getName(), that.getName()) && Objects.equals(getSurname(), that.getSurname()) && Objects.equals(getPhoneNumber(), that.getPhoneNumber()) && getRelation() == that.getRelation();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getSurname(), getPhoneNumber(), getRelation());
     }
 
     //Custom toString() Implementation
@@ -46,3 +59,5 @@ public class ContactManager <T> {
 
     }
 }
+
+
