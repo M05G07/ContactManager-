@@ -50,7 +50,7 @@ public class ContactManager {
         return Objects.hash(getName(), getSurname(), getPhoneNumber(), getRelation());
     }
 
-    //Custom toString() Implementation
+    //Customized toString() Implementation
 
     @Override
     public String toString() {
