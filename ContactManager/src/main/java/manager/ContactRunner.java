@@ -36,30 +36,7 @@ public class ContactRunner {
             contactBook.addAll(unique);
 
         } ;
-
-
-        checker.checkPerson("Pepa","Pig","123",ContactCategory.COLD_CONTACT);
-        checker.checkPerson("Pepa","Pig","123",ContactCategory.COLD_CONTACT);
-        checker.checkPerson("Pepa","Pig","123",ContactCategory.COLD_CONTACT);
-        checker.checkPerson("Lada","Pig","124",ContactCategory.POTENTIAL_CUSTOMER);
-        checker.checkPerson("Pepa","Pig","123",ContactCategory.COLD_CONTACT);
-        checker.checkPerson("Rowana","Pig","123",ContactCategory.COLD_CONTACT);
-        checker.checkPerson("Rowana","Pig","123",ContactCategory.COLD_CONTACT);
-        checker.checkPerson("Rowana","Pig","123",ContactCategory.POTENTIAL_CUSTOMER);
-        checker.checkPerson("Anna","Pig", "+421",ContactCategory.VENDOR);
-
-        sorter.sortContentofList(contactBook);
-
-        printer.retrieveContentofList(contactBook);
-
-
-
-
-        }
-
-
-
-
+    }
 }
 
 
